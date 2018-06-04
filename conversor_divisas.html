@@ -1,0 +1,579 @@
+  
+  <script language="JavaScript">
+
+
+
+function adaptar_cifra(temporal)
+
+{
+
+var i=0;
+
+var temp = "";
+
+var aux;
+
+aux=temporal;
+
+distancia=aux.indexOf('.');
+
+if (distancia==0)
+
+	{  
+
+		temp= temp + "0";
+
+	}
+
+
+
+if (distancia>3)
+
+	{
+
+		tam = distancia;
+
+		for (dist=tam;dist-3>0;dist-=3)
+
+			{
+
+				temp = aux.substring(dist-3,dist) + temp;
+
+				temp = "." + temp;
+
+			}
+
+		temp = aux.substring(dist-3,dist) + temp;
+
+		temp = temp + ',';
+
+		temp = temp + aux.substring(distancia+1,aux.length);
+
+		return temp;
+
+	}
+
+
+
+if (distancia>=0 && distancia<=3)
+
+	{
+
+		temp = temp + aux.substring(0,distancia);
+
+		temp = temp + ',';
+
+		temp = temp + aux.substring(distancia+1,aux.length);
+
+		return(temp);
+
+	}
+
+
+
+if (distancia==-1 && aux.length>3)
+
+	{
+
+		tam = aux.length;
+
+		
+
+		for (dist=tam;dist-3>0;dist-=3)
+
+			{
+
+				temp = aux.substring(dist-3,dist) + temp;
+
+				temp = "." + temp;
+
+			}
+
+		temp =  aux.substring(0,dist) + temp;
+
+		return temp;
+
+	}
+
+
+
+if (distancia==-1 && aux.length<=3)
+
+	{
+
+		temp = aux;
+
+		return temp;
+
+	}
+
+
+
+
+
+} // Fin Funcion
+
+
+
+
+
+// =================================================
+
+function quitar_coma(temporal)
+
+{
+
+
+
+var i=0;
+
+var temp = "";
+
+
+
+distancia=temporal.indexOf(',');
+
+
+
+if (distancia==0)
+
+	{  
+
+		temp= temp + "0";
+
+	}
+
+
+
+
+
+if (temporal.indexOf(',')!=-1)
+
+	{
+
+		temp = temp + temporal.substring(0,distancia);
+
+		temp = temp + '.';
+
+		temp = temp + temporal.substring(distancia+1,temporal.length);
+
+	}
+
+else
+
+	{
+
+		temp = temporal;
+
+	}
+
+
+
+return temp;
+
+
+
+} // FÃ­n FunciÃ³n
+
+
+
+// =================================================
+
+function convertir(origen)
+
+{
+
+cambio = new Array(12);
+
+cambio[0]=1;
+
+cambio[1]=166.386;
+
+cambio[2]=40.340;
+
+cambio[3]=1.956;
+
+cambio[4]=6.560;
+
+cambio[5]=0.788;
+
+cambio[6]=1936.270;
+
+cambio[7]=40.340;
+
+cambio[8]=2.204;
+
+cambio[9]=13.760;
+
+cambio[10]=200.482;
+
+cambio[11]=5.946;
+
+
+
+
+
+// 1 PASO: Actualizar el valor en Euros dependiendo de la moneda introducida
+
+var temp_sincoma
+
+var temporal = quitar_coma(document.calc.EUR.value);
+
+
+
+if (origen == 0)
+
+{
+
+			temp_sincoma = quitar_coma(document.calc.EUR.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+}
+
+if (origen == 1)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.ESP.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[1])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.ESP.value;
+
+}
+
+if (origen == 2)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.BEF.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[2])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.BEF.value;
+
+}
+
+if (origen == 3)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.DEM.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[3])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.DEM.value;
+
+}
+
+if (origen == 4)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.FRF.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[4])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.FRF.value;
+
+}
+
+
+if (origen == 5)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.IEP.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[5])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.IEP.value;
+
+}
+
+if (origen == 6)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.ITL.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[6])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.ITL.value;
+
+}
+
+if (origen == 7)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.LUF.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[7])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.LUF.value;
+
+}
+
+if (origen == 8)
+
+{
+
+			temp_sincoma = quitar_coma(document.calc.NLG.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[8])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.NLG.value;
+
+}
+
+if (origen == 9)
+
+{
+
+ 			temp_sincoma = quitar_coma(document.calc.ATS.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[9])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.ATS.value;
+
+}
+
+if (origen == 10)
+
+{
+
+  			temp_sincoma = quitar_coma(document.calc.PTE.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[10])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.PTE.value;
+
+}
+
+if (origen == 11)
+
+{
+
+		 	temp_sincoma = quitar_coma(document.calc.FIM.value);
+
+			if (isNaN(temp_sincoma) || temp_sincoma.indexOf('-')>=0 ) {alert ("Por favor, introduzca un numero positivo valido.");return;}
+
+			temporal = String(Math.round(( temp_sincoma / cambio[11])*1000)/1000);
+
+			document.calc.EUR.value = adaptar_cifra(temporal);
+
+			valor = document.calc.FIM.value;
+
+}
+
+
+
+
+
+// 2 PASO: Calcular el valor de todos los campos
+
+
+
+var temporal2;
+
+
+
+if (origen!=1)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[1]*1000)/1000);
+
+document.calc.ESP.value = adaptar_cifra(temporal2);
+
+}
+
+
+
+if (origen!=2)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[2]*1000)/1000)
+
+document.calc.BEF.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=3)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[3]*1000)/1000);
+
+document.calc.DEM.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=4)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[4]*1000)/1000);
+
+document.calc.FRF.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=5)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[5]*1000)/1000);
+
+document.calc.IEP.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=6)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[6]*1000)/1000);
+
+document.calc.ITL.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=7)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[7]*1000)/1000);
+
+document.calc.LUF.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=8)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[8]*1000)/1000);
+
+document.calc.NLG.value = adaptar_cifra(temporal2);
+
+}
+
+
+
+if (origen!=9)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[9]*1000)/1000);
+
+document.calc.ATS.value = adaptar_cifra(temporal2);
+
+}
+
+
+
+if (origen!=10)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[10]*1000)/1000);
+
+document.calc.PTE.value = adaptar_cifra(temporal2);
+
+}
+
+if (origen!=11)
+
+{
+
+temporal2 = String(Math.round(temporal * cambio[11]*1000)/1000);
+
+document.calc.FIM.value = adaptar_cifra(temporal2);
+
+}
+
+
+
+} // Fin Funcion Convertir()
+
+
+
+
+
+
+
+  </script>
+
+
+<a target="new" style="color:#FFFFFF;font-size:14px;font-weight:Bold;font-family:arial; text-decoration:none;" href="http://www.fxexchangerate.com/"></a>
+
+<center>
+
+<script type="text/javascript">var fm="EUR";var ft="USD";var hb="2D6AB4";var hc="FFFFFF";var bb="F0F0F0";var bo="2D6AB4";var tz="timezone";var wh="200x250";var lg="en";</script><script type="text/javascript" src="http://www.fxexchangerate.com/converter.php"></script>
+</center><br></br>
+<form name="calc" height="300" width="100">
+<p></p><center><table bordercolorlight="#000000" bordercolordark="#000000" align="CENTER" bgcolor="#000000" border="0"  cellpadding="0" cellspacing="2" height="126" width="285">
+  <tbody><tr>
+    <td colspan="2" align="CENTER">
+    <b style="color:#FFFFFF;">Introduzca el valor en la moneda</b></td>
+     
+  </tr>
+  <tr align="CENTER">
+    <td align="CENTER" width="30%">
+    <b style="color:#FFFFFF;">EUROS</b></td> 
+    <td width="39%">
+    <input value="0" name="EUR" size="13" onchange="convertir(0)" onkeyup="convertir(0)" type="text">
+</td>
+  </tr>
+  <tr align="CENTER">
+    <td align="CENTER" height="42" width="30%">
+    <b style="color:#FFFFFF;">PESETAS</b></td> 
+    <td height="42" width="39%">
+    <input name="ESP" size="13" onkeyup="convertir(1)" onchange="convertir(1)" type="text">
+</td>
+  </tr>
+</tbody></table></center></form>
