@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function comprobar_matricula(matricula){
+          var patron=/^[1|3|5|7|9]{1}[0-9]{4}[P|S]{1}$/;
+          if(matricula.match(new RegExp(patron))){
+          document.write("Matrícula válida<hr/>");
+          }
+          else{
+          document.write("Matrícula inválida<hr/>");
+          }
+          }
+          comprobar_matricula("12345P");
+          comprobar_matricula("12345S");
+          comprobar_matricula("123455P");
+          comprobar_matricula("123455A");
+          </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    
