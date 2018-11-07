@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var idIntervalo=setInterval(function(){
+            intervaloReloj()
+        },500);
+        function intervaloReloj(){
+            var d=new Date();
+            var t=d.toLocaleTimeString();
+            document.getElementById("reloj").value=t;
+            document.getElementById("progreso").style.width=(documento.getElementById("progreso").clientWidth+15);
+            document.getElementById("progreso").value=document.getElementById("progreso").style.width;
+        }
+    </script>
+</head>
+<body>
+    <input style="font-size:30px;color:blue;text-align:center;" type="text" id="reloj" disabled/>
+   
+</body>
+</html>
