@@ -70,3 +70,32 @@ codigoPostal.test (     '1');  // false
     email.test ('pepe#lopez@tienda.com');         // false
     email.test ('pepe_lopez@ventas/tienda.com');  // false
 ~~~
+
+# Contrasena segura
+- Crea un programa que pida al usuario una propuesta de contraseña y
+compruebe si cumple con los siguientes requisitos.
+- Tiene entre 8 y 16 caracteres.
+- Tiene una letra mayúscula.
+- Tiene una letra minúscula.
+- Tiene un número.
+- Tiene uno de los siguientes valores: guión alto, guión bajo, arroba,
+almohadilla, dólar, tanto por ciento o ampersand.
+- Si cumple con todos los requisitos se considera una contraseña segura, de lo
+contrario mostrará que es una contraseña no segura.
+
+~~~js
+<script type="text/javascript">
+
+var pass=prompt("Introduce la contraseña");
+
+if(pass.length>8 && pass.length<16 && pass.match(/[A-Z]/g)
+&& pass.match(/[a-z]/g)&& pass.match(/[0-9]/g)&&
+pass.match(/[-||_||@||#||$||%||&]/g)){
+	document.write("Contraseña segura");
+}
+else{
+	document.write("Contraseña no segura");
+}
+
+</script>
+~~~
