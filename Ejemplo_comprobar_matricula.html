@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Validación de Matrícula</title>
+</head>
+<body>
+    <script>
+    function comprobar_matricula(matricula){
+        var patron=/^[0-9]{4}[A-Z]/;
+
+        if(patron.test(matricula)){
+        //if(matricula.match(new RegExp(patron))){
+            document.write("Matrícula válida");
+        }
+        else{
+            document.write("Matrícula inválida");
+        }
+        }
+        comprobar_matricula('1455ADB');
+        </script>
+        
+</body>
+</html>
