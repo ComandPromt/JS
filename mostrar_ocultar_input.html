@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipular DOM</title>
+    <script type="text/javascript">
+        function mostrar(obj){
+            if(document.getElementById("txtColor").style.display=="none"){
+                document.getElementById("txtColor").style.display="inline";
+                obj.innerHTML="Ocultar";
+            }
+            else{
+                document.getElementById("txtColor").style.display="none";
+                obj.innerHTML="Mostrar";
+            }
+        }
+
+    </script>
+</head>
+<body>
+ <div id="elementosTag">
+<h3>Modificacion propiedades css</h3>
+<div>
+    <span>Caja de texto</span>
+    <input type="text" id="txtColor">
+    <button id="boton" onclick="mostrar(this);">Ocultar</button>
+</div>     
+</div>  
+</body>
+</html>
