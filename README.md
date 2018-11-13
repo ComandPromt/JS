@@ -9,6 +9,7 @@ Introduce un numero y te dirá si el numero elegido es mayor o menor al aleatori
 [Conversor de divisas](https://github.com/ComandPromt/JS/blob/master/conversor_divisas.html)
 
 # Funcion copiarAlPortapapeles
+
 ~~~js 
 function copiarAlPortapapeles(id_elemento) {
 
@@ -20,6 +21,7 @@ document.execCommand("copy");
 ~~~
 
 # Funcion Recargar Pagina
+
 ~~~js
 function recargar()
 {
@@ -31,6 +33,7 @@ setInterval('recargar()',20000)
 # Expresiones Regulares
 
 ## Comprobar URL
+
 ~~~js
 let url = /^(http|ftp|https)\:\/\/[a-z0-9\_-]+(\.[a-z0-9\_-]+)*(\:[0-9]{2,4})?$/;
 
@@ -40,7 +43,8 @@ document.write(url.test ('file:///bin/bash')+"<br/>");  //false
 document.write(url.test ('https://google.es/index.html')+"<br/>");//false
 ~~~
 
-## Ejemplo de validación de teléfono:
+## Ejemplo de validación de teléfono
+
 ~~~js
 let telefono = /^[6789][0-9]{8}$/;
 
@@ -50,7 +54,8 @@ telefono.test ('95566622a');  // false
 telefono.test ('609123456');  // true
 ~~~
 
-## Ejemplo de validación de código postal:
+## Ejemplo de validación de código postal
+
 ~~~js
 let codigoPostal = /^[0-9]{4,5}$/;
 
@@ -71,15 +76,22 @@ codigoPostal.test (     '1');  // false
     email.test ('pepe_lopez@ventas/tienda.com');  // false
 ~~~
 
-# Contrasena segura
+## Contraseña segura
+
 - Crea un programa que pida al usuario una propuesta de contraseña y
 compruebe si cumple con los siguientes requisitos.
+
 - Tiene entre 8 y 16 caracteres.
+
 - Tiene una letra mayúscula.
+
 - Tiene una letra minúscula.
+
 - Tiene un número.
+
 - Tiene uno de los siguientes valores: guión alto, guión bajo, arroba,
 almohadilla, dólar, tanto por ciento o ampersand.
+
 - Si cumple con todos los requisitos se considera una contraseña segura, de lo
 contrario mostrará que es una contraseña no segura.
 
