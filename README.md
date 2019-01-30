@@ -23,18 +23,8 @@
 [Ejemplo de uso de tooltips](https://github.com/ComandPromt/JS/tree/master/Basic%20Tooltip)
 
 # Efecto nieve
-
+![Efecto nieve](efecto_nieve.png)
 [Efecto de nieve](https://github.com/ComandPromt/JS/tree/master/Efecto_nieve)
-
-# Charts
-
-[Charts](https://github.com/ComandPromt/JS/tree/master/charts/charts)
-
-# Juego de adivinar el numero
-
-Introduce un numero y te dirá si el numero elegido es mayor o menor al aleatorio.
-
-[Adivinar numero](https://github.com/ComandPromt/JS/blob/master/adivinar_numero_js.html)
 
 # Conversor divisas
 
