@@ -1,3 +1,35 @@
+# Ejemplos de prompt (recoger datos por teclado)
+[Ejemplo1](https://github.com/ComandPromt/JS/blob/master/ejemplo1-js.html)
+[Ejemplo2](https://github.com/ComandPromt/JS/blob/master/ejemplo2-js.html)
+
+# Calcular area del radio
+[Calcular area del radio](https://github.com/ComandPromt/JS/blob/master/Areas.html)
+
+# Mostrar/ocultar input
+[Mostar/ocultar input](https://github.com/ComandPromt/JS/blob/master/mostrar_ocultar_input.html)
+
+# Hora
+[Hora en JS](https://github.com/ComandPromt/JS/blob/master/hora.html)
+
+# Hora en titulo
+[Hora en titulo](https://github.com/ComandPromt/JS/blob/master/hora_en_title.html)
+
+# Funciones con arrays
+
+[Funciones con arrays](https://github.com/ComandPromt/JS/tree/master/Arrays/Paises)
+
+# Ejemplo de uso de tooltips
+
+[Ejemplo de uso de tooltips](https://github.com/ComandPromt/JS/tree/master/Basic%20Tooltip)
+
+# Efecto nieve
+
+[Efecto de nieve](https://github.com/ComandPromt/JS/tree/master/Efecto_nieve)
+
+# Charts
+
+[Charts](https://github.com/ComandPromt/JS/tree/master/charts/charts)
+
 # Juego de adivinar el numero
 
 Introduce un numero y te dirá si el numero elegido es mayor o menor al aleatorio.
@@ -32,6 +64,10 @@ setInterval('recargar()',20000)
 
 # Expresiones Regulares
 
+## Comprobar matricula
+[Comprobar matricula Ejemplo 1](https://github.com/ComandPromt/JS/blob/master/Comprobar%20matricula.html)
+[Comprobar matricula Ejemplo 2](https://github.com/ComandPromt/JS/blob/master/Ejemplo_comprobar_matricula.html)
+
 ## Comprobar URL
 
 ~~~js
@@ -55,6 +91,8 @@ telefono.test ('609123456');  // true
 ~~~
 
 ## Ejemplo de validación de código postal
+
+[Ejemplo](https://github.com/ComandPromt/JS/blob/master/Ejemplo_comprobar_cod_postal.html)
 
 ~~~js
 let codigoPostal = /^[0-9]{4,5}$/;
