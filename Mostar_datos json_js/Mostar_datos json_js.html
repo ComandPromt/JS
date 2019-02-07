@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="datos.json"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ var aux=datos;
+ var aux2="";
+ for(var i=0;i<aux[0].datos[0].colores.length;i++){
+aux2+=aux[0].datos[0].colores[i]+" ";
+ }
+ alert("Nombre: "+aux[0].datos[0].nombre+"\nApellidos: "+aux[0].datos[0].apellido1+" "+aux[0].datos[0].apellido2+"\nColores: "+aux2);
+        </script>
+
+</body>
+</html>

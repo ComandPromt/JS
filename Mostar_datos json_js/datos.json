@@ -1,0 +1,20 @@
+var datos=[{
+  "datos":[{
+  "dni": "17458997A",
+  "nombre": "Ramón Jesús",
+  "apellido1": "Gómez",
+  "apellido2":"Carmona",
+  "domicilio":[{
+    "pais":"España",
+    "provincia":"Sevilla",
+    "ciudad":"Écija",
+    "calle":"Barcelona",
+    "numero":"18"
+  }],
+  "colores": [
+      "verde",
+      "rojo",
+      "azul"
+  ]
+  }]
+}]
