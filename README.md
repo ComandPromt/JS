@@ -10,9 +10,11 @@
 [Calcular area del radio](https://github.com/ComandPromt/JS/blob/master/Areas.html)
 
 # Mostrar/ocultar input
+![Mostrar/ocultar input](previews/mostrar_ocultar.png)
 [Mostar/ocultar input](https://github.com/ComandPromt/JS/blob/master/mostrar_ocultar_input.html)
 
 # Hora
+![Hora](previews/hora.png)
 [Hora en JS](https://github.com/ComandPromt/JS/blob/master/hora.html)
 
 # Hora en titulo
@@ -31,7 +33,7 @@
 [Efecto de nieve](https://github.com/ComandPromt/JS/tree/master/Efecto_nieve)
 
 # Conversor divisas
-
+![Conversor](previews/divisas.png)
 [Conversor de divisas](https://github.com/ComandPromt/JS/blob/master/conversor_divisas.html)
 
 # Funcion copiarAlPortapapeles
