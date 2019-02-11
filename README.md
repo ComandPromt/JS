@@ -1,3 +1,7 @@
+
+# Mostrar Datos de un archivo Json 
+[Ejemplo1](https://github.com/ComandPromt/JS/tree/master/Mostar_datos%20json_js)
+
 # Ejemplos de prompt (recoger datos por teclado)
 [Ejemplo1](https://github.com/ComandPromt/JS/blob/master/ejemplo1-js.html)
 [Ejemplo2](https://github.com/ComandPromt/JS/blob/master/ejemplo2-js.html)
