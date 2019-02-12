@@ -11,6 +11,7 @@
 
 # Mostrar/ocultar input
 ![Mostrar/ocultar input](previews/mostrar_ocultar.png)
+
 [Mostar/ocultar input](https://github.com/ComandPromt/JS/blob/master/mostrar_ocultar_input.html)
 
 # Hora
