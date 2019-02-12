@@ -1,6 +1,6 @@
 
 # Mostrar Datos de un archivo Json 
-[Ejemplo1](https://github.com/ComandPromt/JS/tree/master/Mostar_datos%20json_js)
+[Mostrar Json](https://github.com/ComandPromt/JS/tree/master/Mostar_datos%20json_js)
 
 # Ejemplos de prompt (recoger datos por teclado)
 [Ejemplo1](https://github.com/ComandPromt/JS/blob/master/ejemplo1-js.html)
@@ -36,6 +36,7 @@
 
 # Conversor divisas
 ![Conversor](previews/divisas.png)
+
 [Conversor de divisas](https://github.com/ComandPromt/JS/blob/master/conversor_divisas.html)
 
 # Funcion copiarAlPortapapeles
