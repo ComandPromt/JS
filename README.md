@@ -148,3 +148,9 @@ else{
 
 </script>
 ~~~
+
+# Listas encadenadas JS
+
+![Lista](previews/lista_1.png)
+![Lista](previews/lista_2.png)
+![Lista](previews/lista_3.png)
