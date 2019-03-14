@@ -154,3 +154,5 @@ else{
 ![Lista](previews/lista_1.png)
 ![Lista](previews/lista_2.png)
 ![Lista](previews/lista_3.png)
+
+[Listas](https://github.com/ComandPromt/JS/tree/master/listas_json)
