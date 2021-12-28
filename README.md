@@ -149,6 +149,22 @@ else{
 </script>
 ~~~
 
+# Array int to text UTF-8
+
+~~~js
+
+var test = new TextDecoder('utf-8');
+
+var texto='216,175,217,132,217,138,217,132';
+  
+var cadena = texto.split(",");
+
+var test2 = new Uint8Array(cadena);
+
+console.log(test.decode(test2));
+
+~~~
+
 # Listas encadenadas JS
 
 ![Lista](previews/lista_1.png)
