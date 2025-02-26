@@ -115,6 +115,12 @@ codigoPostal.test (     '1');  // false
 
 ## Contraseña segura
 
+~~~js
+
+const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.,:;'"!¡*[-_@#$%&]).{8,16}$/;
+
+~~~
+
 - Crea un programa que pida al usuario una propuesta de contraseña y
 compruebe si cumple con los siguientes requisitos.
 
