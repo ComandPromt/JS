@@ -117,9 +117,16 @@ codigoPostal.test (     '1');  // false
 
 ~~~js
 
-const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.,:;'"!¡*[-_@#$%&]).{8,16}$/;
+const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.,:;'"!¡*[-_@#$%&]).{8,}$/;
 
 ~~~
+
+~~~php
+
+$patronpass = '/^((?=(.*[\d0-9\@\&#\$\?\%!\|(){}[\]]){1,})(?=(.*[a-zA-Z]){2,}).{8,})$/';
+
+~~~
+
 
 - Crea un programa que pida al usuario una propuesta de contraseña y
 compruebe si cumple con los siguientes requisitos.
